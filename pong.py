@@ -94,15 +94,16 @@ while True:
     # Border checking
     if ball.ycor() > 290:
         ball.sety(290)
-        ball.dy *= -1
+        ball.dy *= -1.05
         
     if ball.ycor() < -290:
         ball.sety(-290)
-        ball.dy *= -1
+        ball.dy *= -1.05
     
     if ball.xcor() > 390:
         ball.goto(0, 0)
-        ball.dx = -0.1
+        ball.dx = (ball.dx/abs(ball.dx)) * -0.1
+        ball.dy = (ball.dy/abs(ball.dy)) * -0.1
         score_a += 1
         pen.clear()
         pen.write("P1: {}                                    P2: {}".format(score_a, score_b), align = "center", font = ("Courier", 20, "normal"))
@@ -110,7 +111,8 @@ while True:
         
     if ball.xcor() < -390:
         ball.goto(0, 0)
-        ball.dx = 0.1
+        ball.dx = (ball.dx/abs(ball.dx)) * -0.1
+        ball.dy = (ball.dy/abs(ball.dy)) * -0.1
         score_b += 1
         pen.clear()
         pen.write("P1: {}                                    P2: {}".format(score_a, score_b), align = "center", font = ("Courier", 20, "normal"))
@@ -119,10 +121,10 @@ while True:
     # Paddle and ball collisions
     if (ball.xcor() > 340 and ball.xcor() < 350) and (ball.ycor() < paddle_b.ycor() + 49 and ball.ycor() > paddle_b.ycor() - 49):
         ball.setx(340)
-        ball.dx *= -1.15
+        ball.dx *= -1.05
         
     if (ball.xcor() < -340 and ball.xcor() > -350) and (ball.ycor() < paddle_a.ycor() + 49 and ball.ycor() > paddle_a.ycor() - 49):
         ball.setx(-340)
-        ball.dx *= -1.15
+        ball.dx *= -1.05
         
     
