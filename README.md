@@ -9,10 +9,12 @@ Move up: w key
 
 Move down: s key
 
+
 #### Right Paddle (P2)
 Move up: Up arrow key
 
 Move down: Down arrow key
+
 
 ### Game loop
 - The ball gets slightly faster in the y-direction every time it collides with the top and bottom borders, and slightly faster in the x-direction every time it collides with one of the paddles.
