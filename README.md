@@ -3,6 +3,7 @@
 ## How to Play
 
 ### Controls
+
 #### Left Paddle (P1)
 Move up: w key
 
@@ -31,6 +32,7 @@ Move down: Down arrow key
 Play the game on my [Replit](https://replit.com/@baldridgela/pongpy#pong.py).
 
 1.) Fork the repo and clone it down using the SSH key. Copy and paste code below in your preferred directory in your terminal.
+
 `git clone git@github.com:isaacbaldridge/pong-game.git`
 
 2.) Run the pong.py file.
