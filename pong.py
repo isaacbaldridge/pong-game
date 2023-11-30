@@ -103,7 +103,10 @@ while True:
     if ball.xcor() > 390:
         ball.goto(0, 0)
         ball.dx = (ball.dx/abs(ball.dx)) * -0.1
-        ball.dy = (ball.dy/abs(ball.dy)) * -0.1
+        if ball.dy > 0:
+            ball.dy = -0.1
+        else:
+            ball.dy = 0.1
         score_a += 1
         pen.clear()
         pen.write("P1: {}                                    P2: {}".format(score_a, score_b), align = "center", font = ("Courier", 20, "normal"))
@@ -112,7 +115,10 @@ while True:
     if ball.xcor() < -390:
         ball.goto(0, 0)
         ball.dx = (ball.dx/abs(ball.dx)) * -0.1
-        ball.dy = (ball.dy/abs(ball.dy)) * -0.1
+        if ball.dy > 0:
+            ball.dy = -0.1
+        else:
+            ball.dy = 0.1
         score_b += 1
         pen.clear()
         pen.write("P1: {}                                    P2: {}".format(score_a, score_b), align = "center", font = ("Courier", 20, "normal"))
