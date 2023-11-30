@@ -5,10 +5,12 @@
 ### Controls
 #### Left Paddle (P1)
 Move up: w key
+
 Move down: s key
 
 #### Right Paddle (P2)
 Move up: Up arrow key
+
 Move down: Down arrow key
 
 ### Game loop
